@@ -1,1 +1,11 @@
-<p>home works!</p>
+<section>
+    <h1>Au petit village</h1>
+    <p>Au petit village confectionne des figurines faites main, inspirées de l'univers d'Astérix et Obélix, pour les nostalgiques des célèbres aventures gauloises.</p>
+</section>
+
+<section>
+    <div *ngFor="let produit of produits">
+        <h2>{{ produit.nom }}</h2>
+        <p>{{ produit.prix }} €</p>
+    </div>
+</section>
