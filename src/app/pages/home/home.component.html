@@ -4,7 +4,10 @@
 </section>
 
 <section>
-    <div *ngFor="let produit of produits">
+    <button (click)="trier('asc')">Prix croissant</button>
+    <button (click)="trier('desc')">Prix décroissant</button>
+    <input type="text" placeholder="Rechercher une figurine..." (input)="rechercher($event)">
+    <div *ngFor="let produit of produits | filterByName:recherche | sortByPrice:ordre">
         <h2>{{ produit.nom }}</h2>
         <p>{{ produit.prix }} €</p>
     </div>
