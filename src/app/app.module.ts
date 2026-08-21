@@ -9,6 +9,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { SortByPricePipe } from './pipes/sort-by-price.pipe';
+import { FilterByNamePipe } from './pipes/filter-by-name.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     AboutComponent,
     ProductComponent,
     ContactComponent,
+    SortByPricePipe,
+    FilterByNamePipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],

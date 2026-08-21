@@ -9,8 +9,19 @@ import { Produit, ProductsService } from '../../services/products.service';
 })
 export class HomeComponent {
   produits: Produit[] = [];
+  ordre: string = 'asc';
+  recherche: string = '';
 
   constructor(private productsService: ProductsService) {
     this.produits = this.productsService.getProduits();
+  }
+
+  trier(nouvelOrdre: string): void {
+    this.ordre = nouvelOrdre;
+  }
+
+  rechercher(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.recherche = input.value;
   }
 }
