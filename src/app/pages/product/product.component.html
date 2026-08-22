@@ -1,1 +1,5 @@
-<p>product works!</p>
+<section *ngIf="produit">
+    <h1>{{ produit.nom }}</h1>
+    <p>{{ produit.prix }} €</p>
+    <p>{{ produit.description }}</p>
+</section>

@@ -8,7 +8,9 @@
     <button (click)="trier('desc')">Prix décroissant</button>
     <input type="text" placeholder="Rechercher une figurine..." (input)="rechercher($event)">
     <div *ngFor="let produit of produits | filterByName:recherche | sortByPrice:ordre">
-        <h2>{{ produit.nom }}</h2>
-        <p>{{ produit.prix }} €</p>
+      <a [routerLink]="['/produit', produit.id]">
+      <h2>{{ produit.nom }}</h2>
+      <p>{{ produit.prix }} €</p>
+      </a>
     </div>
 </section>
