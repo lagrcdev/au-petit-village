@@ -9,6 +9,7 @@
     <input type="text" placeholder="Rechercher une figurine..." (input)="rechercher($event)">
     <div *ngFor="let produit of produits | filterByName:recherche | sortByPrice:ordre">
       <a [routerLink]="['/produit', produit.id]">
+      <img [src]="'images/' + produit.photo" alt="{{ produit.nom }}">
       <h2>{{ produit.nom }}</h2>
       <p>{{ produit.prix }} €</p>
       </a>

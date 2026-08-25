@@ -1,5 +1,6 @@
 <section *ngIf="produit">
     <h1>{{ produit.nom }}</h1>
+    <img [src]="'images/' + produit.photo" alt="{{ produit.nom }}">
     <p>{{ produit.prix }} €</p>
     <p>{{ produit.description }}</p>
 </section>
