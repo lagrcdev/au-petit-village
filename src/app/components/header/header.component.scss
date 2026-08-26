@@ -17,8 +17,12 @@ nav {
 
 nav a,
 nav a:visited,
-nav a:active,
-nav a:hover {
+nav a:active {
   color: #151217;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #FDD90B;
   text-decoration: none;
 }
