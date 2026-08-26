@@ -1,17 +1,24 @@
-<section>
+<section class="presentation">
     <h1>Au petit village</h1>
     <p>Au petit village confectionne des figurines faites main, inspirées de l'univers d'Astérix et Obélix, pour les nostalgiques des célèbres aventures gauloises.</p>
 </section>
 
 <section>
-    <button (click)="trier('asc')">Prix croissant</button>
-    <button (click)="trier('desc')">Prix décroissant</button>
+  <div class="controls">
     <input type="text" placeholder="Rechercher une figurine..." (input)="rechercher($event)">
-    <div *ngFor="let produit of produits | filterByName:recherche | sortByPrice:ordre">
+    <div class="tri-boutons">
+      <button (click)="trier('asc')">Prix croissant</button>
+      <button (click)="trier('desc')">Prix décroissant</button>
+    </div>
+  </div>
+
+  <div class="catalogue">
+    <div class="produit" *ngFor="let produit of produits | filterByName:recherche | sortByPrice:ordre">
       <a [routerLink]="['/produit', produit.id]">
-      <img [src]="'images/' + produit.photo" alt="{{ produit.nom }}">
-      <h2>{{ produit.nom }}</h2>
-      <p>{{ produit.prix }} €</p>
+        <img [src]="'images/' + produit.photo" alt="{{ produit.nom }}">
+        <h2>{{ produit.nom }}</h2>
+        <p>{{ produit.prix }} €</p>
       </a>
     </div>
+  </div>
 </section>

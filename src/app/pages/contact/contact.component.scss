@@ -1,0 +1,40 @@
+section {
+  padding: 24px 32px 80px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 2px solid #151217;
+  border-radius: 8px;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #DA001E;
+  color: white;
+  font-family: 'Comfortaa', sans-serif;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #151217;
+}
